@@ -34,7 +34,6 @@ class TrackTableViewCell: UITableViewCell {
         
         let minutes = track.duration / 60
         let seconds = track.duration % 60
-        let text = String(format:"%d:%02d", minutes, seconds)
-        trackDuration.text = text
+        trackDuration.text = String(format:"%d:%02d", minutes, seconds)
     }
 }
