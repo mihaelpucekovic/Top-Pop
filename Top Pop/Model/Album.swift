@@ -8,17 +8,18 @@
 
 import Foundation
 
-class Album {
-    
+struct Album: Codable {
     let id: Int
     let title: String
     let cover: String
-    var tracks = [Track]()
-     
-    init(id: Int, title: String, cover: String, tracks: [Track]) {
-        self.id = id
-        self.title = title
-        self.cover = cover
-        self.tracks = tracks
-    }
+    let tracks: TracksAlbum
+}
+
+struct TracksAlbum: Codable {
+    let data: [TrackAlbum]
+}
+
+struct TrackAlbum: Codable {
+    let id: Int
+    let title: String
 }

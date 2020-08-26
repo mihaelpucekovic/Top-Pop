@@ -1,8 +1,8 @@
 //
-//  AlbumService.swift
+//  AlbumServiceNew.swift
 //  Top Pop
 //
-//  Created by Mihael Puceković on 25/08/2020.
+//  Created by Mihael Puceković on 26/08/2020.
 //  Copyright © 2020 Mihael. All rights reserved.
 //
 
@@ -16,60 +16,20 @@ class AlbumService {
             let request = URLRequest(url: url)
             
             let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                if let data = data {
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        
-                        if let albumArray = json as? [String: Any] {
-                            let albumId = albumArray["id"] as? Int
-                            let albumTitle = albumArray["title"] as? String
-                            let albumCover = albumArray["cover"] as? String
-                            
-                            if let artistArray = albumArray["artist"] as? [String: Any] {
-                                let artistId = artistArray["id"] as? Int
-                                let artistName = artistArray["name"] as? String
-                                let artistPicture = artistArray["picture"] as? String
-                                
-                                if let tracks = albumArray["tracks"] as? [String: Any],
-                                    let tracksData = tracks["data"] as? [[String: Any]] {
-                                    var trackNumber = 0
-                                    let tracksArray = tracksData.compactMap{ json -> Track? in
-                                        if
-                                            let id = json["id"] as? Int,
-                                            let title = json["title"] as? String,
-                                            let duration = json["duration"] as? Int {
-                                            
-                                            let artist = Artist(id: artistId!, name: artistName!, picture: artistPicture!)
-                                            trackNumber += 1
-                                                                    
-                                            let track = Track(id: id, title: title, duration: duration, artist: artist, trackNumber: "\(trackNumber).", albumId: albumId!)
-                                                                    
-                                            return track
-                                        } else {
-                                            return nil
-                                        }
-                                    }
-                                    
-                                    let album = Album(id: artistId!, title: albumTitle!, cover: albumCover!, tracks: tracksArray)
-                                    
-                                    completion(.success(album))
-                                } else {
-                                    completion(.failure("Failure"))
-                                }
-                            }
-                        } else {
-                            completion(.failure("Failure"))
-                        }
-                    } catch {
+                if let jsonData = data {
+                    let decoder = JSONDecoder()
+                
+                    if let album = try? decoder.decode(Album.self, from: jsonData) {
+                        completion(.success(album))
+                    }
+                    else {
                         completion(.failure("Failure"))
                     }
-                    
-                } else {
-                    completion(.failure("Failure"))
                 }
             }
             dataTask.resume()
-        } else {
+        }
+        else {
             completion(.failure("Failure"))
         }
     }

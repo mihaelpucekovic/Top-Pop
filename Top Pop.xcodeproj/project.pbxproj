@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AEEC9C0A289BC151E83B472 /* Pods_Top_Pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE652DC274F098EDECD5DA84 /* Pods_Top_Pop.framework */; };
 		48260D9824F3D2B500CC29BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260D9724F3D2B500CC29BE /* AppDelegate.swift */; };
 		48260D9A24F3D2B500CC29BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260D9924F3D2B500CC29BE /* SceneDelegate.swift */; };
 		48260D9F24F3D2B500CC29BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48260D9D24F3D2B500CC29BE /* Main.storyboard */; };
 		48260DA124F3D2B700CC29BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48260DA024F3D2B700CC29BE /* Assets.xcassets */; };
 		48260DA424F3D2B700CC29BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48260DA224F3D2B700CC29BE /* LaunchScreen.storyboard */; };
 		48260DB224F3D4B300CC29BE /* ResultEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DB124F3D4B300CC29BE /* ResultEnum.swift */; };
-		48260DB424F3E7B100CC29BE /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DB324F3E7B100CC29BE /* Track.swift */; };
-		48260DB624F3F6A300CC29BE /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DB524F3F6A300CC29BE /* Artist.swift */; };
 		48260DB824F3F76900CC29BE /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DB724F3F76900CC29BE /* Album.swift */; };
-		48260DBA24F3FA4400CC29BE /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DB924F3FA4400CC29BE /* TrackService.swift */; };
 		48260DBC24F4038100CC29BE /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DBB24F4038100CC29BE /* TracksViewController.swift */; };
 		48260DBE24F4F9A700CC29BE /* TrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48260DBD24F4F9A700CC29BE /* TrackTableViewCell.xib */; };
 		48260DC024F4F9C400CC29BE /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DBF24F4F9C400CC29BE /* TrackTableViewCell.swift */; };
 		48260DE224F57D0D00CC29BE /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DE124F57D0D00CC29BE /* AlbumViewController.swift */; };
-		48260DE424F5899100CC29BE /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48260DE324F5899100CC29BE /* AlbumService.swift */; };
+		48C3887824F691C300D64E26 /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3887724F691C300D64E26 /* TrackService.swift */; };
+		48C3887A24F6A13000D64E26 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3887924F6A13000D64E26 /* Chart.swift */; };
+		48C3888424F6B34D00D64E26 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3888324F6B34D00D64E26 /* AlbumService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33F260C972235D148E11D3CF /* Pods-Top Pop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Top Pop.debug.xcconfig"; path = "Target Support Files/Pods-Top Pop/Pods-Top Pop.debug.xcconfig"; sourceTree = "<group>"; };
 		48260D9424F3D2B400CC29BE /* Top Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48260D9724F3D2B500CC29BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48260D9924F3D2B500CC29BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,15 +34,16 @@
 		48260DA324F3D2B700CC29BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48260DA524F3D2B700CC29BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48260DB124F3D4B300CC29BE /* ResultEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultEnum.swift; sourceTree = "<group>"; };
-		48260DB324F3E7B100CC29BE /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		48260DB524F3F6A300CC29BE /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		48260DB724F3F76900CC29BE /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		48260DB924F3FA4400CC29BE /* TrackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackService.swift; sourceTree = "<group>"; };
 		48260DBB24F4038100CC29BE /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		48260DBD24F4F9A700CC29BE /* TrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
 		48260DBF24F4F9C400CC29BE /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		48260DE124F57D0D00CC29BE /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
-		48260DE324F5899100CC29BE /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		48C3887724F691C300D64E26 /* TrackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackService.swift; sourceTree = "<group>"; };
+		48C3887924F6A13000D64E26 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		48C3888324F6B34D00D64E26 /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		F19E7BD55A0830A80D0355E5 /* Pods-Top Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Top Pop.release.xcconfig"; path = "Target Support Files/Pods-Top Pop/Pods-Top Pop.release.xcconfig"; sourceTree = "<group>"; };
+		FE652DC274F098EDECD5DA84 /* Pods_Top_Pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Top_Pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEEC9C0A289BC151E83B472 /* Pods_Top_Pop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,8 @@
 			children = (
 				48260D9624F3D2B400CC29BE /* Top Pop */,
 				48260D9524F3D2B400CC29BE /* Products */,
+				F964A2242AF2F178064697E4 /* Pods */,
+				F68A5EE33AD9FC4EFC760A69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +115,8 @@
 		48260DAD24F3D33600CC29BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				48260DB324F3E7B100CC29BE /* Track.swift */,
-				48260DB524F3F6A300CC29BE /* Artist.swift */,
 				48260DB724F3F76900CC29BE /* Album.swift */,
+				48C3887924F6A13000D64E26 /* Chart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,10 +124,28 @@
 		48260DAE24F3D34400CC29BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				48260DB924F3FA4400CC29BE /* TrackService.swift */,
-				48260DE324F5899100CC29BE /* AlbumService.swift */,
+				48C3887724F691C300D64E26 /* TrackService.swift */,
+				48C3888324F6B34D00D64E26 /* AlbumService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F68A5EE33AD9FC4EFC760A69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE652DC274F098EDECD5DA84 /* Pods_Top_Pop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F964A2242AF2F178064697E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33F260C972235D148E11D3CF /* Pods-Top Pop.debug.xcconfig */,
+				F19E7BD55A0830A80D0355E5 /* Pods-Top Pop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48260DA824F3D2B700CC29BE /* Build configuration list for PBXNativeTarget "Top Pop" */;
 			buildPhases = (
+				85F6CC6FFDAB5AAE37F2DB5B /* [CP] Check Pods Manifest.lock */,
 				48260D9024F3D2B400CC29BE /* Sources */,
 				48260D9124F3D2B400CC29BE /* Frameworks */,
 				48260D9224F3D2B400CC29BE /* Resources */,
+				AE2DEFB2B9516CF92AD7ADD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,21 +217,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85F6CC6FFDAB5AAE37F2DB5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Top Pop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2DEFB2B9516CF92AD7ADD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Top Pop/Pods-Top Pop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Top Pop/Pods-Top Pop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Top Pop/Pods-Top Pop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48260D9024F3D2B400CC29BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C3887824F691C300D64E26 /* TrackService.swift in Sources */,
 				48260DB224F3D4B300CC29BE /* ResultEnum.swift in Sources */,
 				48260D9824F3D2B500CC29BE /* AppDelegate.swift in Sources */,
-				48260DBA24F3FA4400CC29BE /* TrackService.swift in Sources */,
 				48260DBC24F4038100CC29BE /* TracksViewController.swift in Sources */,
-				48260DE424F5899100CC29BE /* AlbumService.swift in Sources */,
 				48260DC024F4F9C400CC29BE /* TrackTableViewCell.swift in Sources */,
+				48C3887A24F6A13000D64E26 /* Chart.swift in Sources */,
 				48260D9A24F3D2B500CC29BE /* SceneDelegate.swift in Sources */,
-				48260DB424F3E7B100CC29BE /* Track.swift in Sources */,
-				48260DB624F3F6A300CC29BE /* Artist.swift in Sources */,
 				48260DB824F3F76900CC29BE /* Album.swift in Sources */,
+				48C3888424F6B34D00D64E26 /* AlbumService.swift in Sources */,
 				48260DE224F57D0D00CC29BE /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +415,7 @@
 		};
 		48260DA924F3D2B700CC29BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33F260C972235D148E11D3CF /* Pods-Top Pop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -368,6 +434,7 @@
 		};
 		48260DAA24F3D2B700CC29BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19E7BD55A0830A80D0355E5 /* Pods-Top Pop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

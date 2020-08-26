@@ -37,8 +37,8 @@ class TracksViewController: UIViewController, UITableViewDelegate, UITableViewDa
         TrackService().fetchTracks() { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let tracks as [Track]):
-                    self!.showFetchedTracks(tracksServer: tracks)
+                case .success(let chart as Chart):
+                    self!.showFetchedTracks(tracksServer: chart.tracks.data)
                 case .failure( _):
                     let alert = UIAlertController(title: "Error", message: "Error while feetching tracks from the server.", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
@@ -112,7 +112,7 @@ class TracksViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackCellReuseIdentifier", for: indexPath) as! TrackTableViewCell
         
         track = tracksArray[indexPath.row]
-        cell.setup(withTrack: track!)
+        cell.setup(withTrack: track!, number: "\(indexPath.row + 1).")
         
         return cell
     }

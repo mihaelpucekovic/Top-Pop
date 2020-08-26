@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TrackTableViewCell: UITableViewCell {
 
@@ -14,6 +15,7 @@ class TrackTableViewCell: UITableViewCell {
     @IBOutlet weak var trackName: UILabel!
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var trackDuration: UILabel!
+    @IBOutlet weak var albumCover: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +29,11 @@ class TrackTableViewCell: UITableViewCell {
         trackDuration.text = ""
     }
     
-    func setup(withTrack track: Track) {
-        trackNumber.text = track.trackNumber
+    func setup(withTrack track: Track, number: String) {
+        let url = URL(string: track.album.cover)
+        albumCover.kf.setImage(with: url)
+        
+        trackNumber.text = number
         trackName.text = track.title
         artistName.text = track.artist.name
         

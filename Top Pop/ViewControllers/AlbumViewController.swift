@@ -18,7 +18,6 @@ class AlbumViewController: UIViewController {
     @IBOutlet weak var albumTracks: UILabel!
     
     var track: Track?
-    var album: Album?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +29,13 @@ class AlbumViewController: UIViewController {
     }
     
     func fetchAlbumFromServer() {
-        AlbumService().fetchAlbum(albumId: track!.albumId) { [weak self] (result) in
+        AlbumService().fetchAlbum(albumId: track!.album.id) { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let fetchedAlbum as Album):
                     self!.showAlbum(fetchedAlbum: fetchedAlbum)
                 case .failure( _):
-                    let alert = UIAlertController(title: "Error", message: "Error while feetching tracks from the server.", preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Error", message: "Error while feetching album from the server.", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
                         self!.fetchAlbumFromServer()
                     }))
@@ -52,17 +51,15 @@ class AlbumViewController: UIViewController {
     }
     
     func showAlbum(fetchedAlbum: Album) {
-        album = fetchedAlbum
+        let url = URL(string: fetchedAlbum.cover)
+        albumCover.kf.setImage(with: url)
         
-        let urlString = URL(string: album!.cover)
-        let imageData = try? Data(contentsOf: urlString!)
-        albumCover.image = UIImage(data: imageData!)
-        
-        albumTitle.text = "Album: \(album!.title)"
+        albumTitle.text = "Album: \(fetchedAlbum.title)"
         
         var tracks = ""
+        let tracksArray = fetchedAlbum.tracks.data
         
-        for track in album!.tracks {
+        for track in tracksArray {
             if tracks == "" {
                 tracks = track.title
             }
