@@ -71,23 +71,6 @@ class TracksViewController: UIViewController, UITableViewDelegate, UITableViewDa
         fetchTracksFromServer()
     }
     
-    func sort(sortType: String) {
-        if (sortType == "normal") {
-            tracksArray = tracksArrayFetched
-            navigationItem.title = "Top 10"
-        }
-        else if (sortType == "sort asc") {
-            tracksArray = tracksArrayFetched.sorted(by: { $0.duration < $1.duration })
-            navigationItem.title = "Top 10 asc"
-        }
-        else if (sortType == "sort desc") {
-            tracksArray = tracksArrayFetched.sorted(by: { $0.duration > $1.duration })
-            navigationItem.title = "Top 10 desc"
-        }
-        
-        refreshTable()
-    }
-    
     @IBAction func clickedSort(_ sender: UIButton) {
         let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
