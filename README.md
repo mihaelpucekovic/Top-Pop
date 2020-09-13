@@ -2,7 +2,7 @@
 
 **About:**
 
-App that is fetching top pop tracks from Deezer API. 
+App is fetching top pop tracks from Deezer API. 
 
 Fetched tracks are shown in a list.
 
