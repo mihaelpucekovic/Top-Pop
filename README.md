@@ -8,7 +8,7 @@ Fetched tracks are shown in a list.
 
 Tracks can be sorted ascending, descending or shown as fetched from API.
 
-When clicked on a track in a list, new screen is shown with information about the track and list of tracks on the album.
+When clicked on a track in a list, new screen is shown with information about the track and a list of tracks on the album.
 
 
 **Top pop tracks fetched from Deezer API:**
